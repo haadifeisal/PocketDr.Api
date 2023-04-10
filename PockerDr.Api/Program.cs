@@ -1,8 +1,15 @@
+using PockerDr.Api;
+using PockerDr.Api.Repositories.ChatGPT;
+using PockerDr.Api.Repositories.ChatGPT.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.Configure<AppSettings>(builder.Configuration);
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IChatGPTRepository, ChatGPTRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
