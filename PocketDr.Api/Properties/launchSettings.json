@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "PockerDr.Api": {
+    "PocketDr.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

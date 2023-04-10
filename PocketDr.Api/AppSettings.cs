@@ -1,4 +1,4 @@
-﻿namespace PockerDr.Api
+﻿namespace PocketDr.Api
 {
     public class AppSettings
     {

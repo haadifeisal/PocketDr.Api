@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PockerDr.Api.Repositories.ChatGPT.Interfaces;
+using PocketDr.Api.Repositories.ChatGPT.Interfaces;
 
-namespace PockerDr.Api.Controllers
+namespace PocketDr.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

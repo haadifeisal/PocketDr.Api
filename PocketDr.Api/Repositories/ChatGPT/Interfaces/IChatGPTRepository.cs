@@ -1,4 +1,4 @@
-﻿namespace PockerDr.Api.Repositories.ChatGPT.Interfaces
+﻿namespace PocketDr.Api.Repositories.ChatGPT.Interfaces
 {
     public interface IChatGPTRepository
     {

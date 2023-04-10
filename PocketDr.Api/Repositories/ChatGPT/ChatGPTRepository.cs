@@ -1,10 +1,10 @@
 ﻿using OpenAI_API.Completions;
 using OpenAI_API;
-using PockerDr.Api.Repositories.ChatGPT.Interfaces;
+using PocketDr.Api.Repositories.ChatGPT.Interfaces;
 using Microsoft.Extensions.Options;
 using System.Runtime;
 
-namespace PockerDr.Api.Repositories.ChatGPT
+namespace PocketDr.Api.Repositories.ChatGPT
 {
     public class ChatGPTRepository: IChatGPTRepository
     {

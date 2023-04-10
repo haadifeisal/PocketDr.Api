@@ -1,6 +1,6 @@
-using PockerDr.Api;
-using PockerDr.Api.Repositories.ChatGPT;
-using PockerDr.Api.Repositories.ChatGPT.Interfaces;
+using PocketDr.Api;
+using PocketDr.Api.Repositories.ChatGPT;
+using PocketDr.Api.Repositories.ChatGPT.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
