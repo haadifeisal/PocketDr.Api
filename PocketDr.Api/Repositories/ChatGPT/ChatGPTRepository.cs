@@ -2,7 +2,6 @@
 using OpenAI_API;
 using PocketDr.Api.Repositories.ChatGPT.Interfaces;
 using Microsoft.Extensions.Options;
-using System.Runtime;
 
 namespace PocketDr.Api.Repositories.ChatGPT
 {
@@ -13,12 +12,20 @@ namespace PocketDr.Api.Repositories.ChatGPT
         {
             _appSettings = appsettings.Value;
         }
+
         public async Task<string> ChatGPT(string input)
         {
+            var messages = new List<dynamic>
+            {
+                new { role = "system", text = _appSettings.HealthCarePrompt },
+                new { role = "user", text = input }
+            };
+
             string outputResult = "";
             var openai = new OpenAIAPI(_appSettings.OpenAiKey);
+
             CompletionRequest completionRequest = new CompletionRequest();
-            completionRequest.Prompt = input;
+            completionRequest.Prompt = string.Join("", messages);
             completionRequest.Model = OpenAI_API.Models.Model.DavinciText;
             completionRequest.MaxTokens = 1024;
 
